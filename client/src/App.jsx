@@ -9,6 +9,7 @@ const Register = lazy(() => import("./pages/Register"));
 const Classes = lazy(() => import("./pages/Classes"));
 const Gyms = lazy(() => import("./pages/Gyms"));
 const Home = lazy(() => import("./pages/Home"));
+const Mental = lazy(() => import("./pages/MentalFitness"));
 
 function PageTransition({ children }) {
   return (
@@ -41,6 +42,14 @@ export default function App() {
                 }
               />
               <Route
+                path="/mental"
+                element={
+                  <PageTransition>
+                    <Mental />
+                  </PageTransition>
+                }
+              />
+              <Route
                 path="/classes"
                 element={
                   <PageTransition>
@@ -64,6 +73,7 @@ export default function App() {
                   </PageTransition>
                 }
               />
+
               <Route
                 path="/register"
                 element={

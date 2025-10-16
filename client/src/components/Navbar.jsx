@@ -6,7 +6,7 @@ const links = [
   { to: '/gyms', label: 'Gyms' },
   { to: '/classes', label: 'Classes' },
   { to: '#diet', label: 'Diet Plans', external: true },
-  { to: '#mental', label: 'Mental Fitness', external: true },
+  { to: '/mental', label: 'Mental Fitness', external: true },
 ]
 
 export default function Navbar() {

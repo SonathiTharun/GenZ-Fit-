@@ -3,6 +3,7 @@ import FullscreenVideoHero from "../components/FullscreenVideoHero";
 import Carousel from "../components/Carousel";
 import { HOMEPAGE_VIDEO, HOMEPAGE_POSTER } from "../constants";
 
+
 export default function Home() {
   return (
     <main>
