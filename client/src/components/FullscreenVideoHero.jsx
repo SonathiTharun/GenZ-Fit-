@@ -32,10 +32,18 @@ export default function FullscreenVideoHero({
         <motion.p className="muted" initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} transition={{delay:0.2,duration:0.6}}>
           {subtitle}
         </motion.p>
-        <motion.div className="cta-row" initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} transition={{delay:0.3,duration:0.6}}>
-          <a href="/classes" className="btn btn-primary">Start Free Trial</a>
-          <a href="/gyms" className="btn btn-ghost">Find a Gym</a>
-        </motion.div>
+        <motion.div
+  className="cta-row"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.6 }}
+  style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', maxWidth: '300px', margin: '0 auto' }}
+>
+  <a href="/classes" className="btn btn-primary" style={{ width: '100%' }}>Start Free Trial</a>
+  <a href="/gyms" className="btn btn-ghost" style={{ width: '100%' }}>Find a Gym</a>
+  <a href="/login" className="btn btn-ghost" style={{ width: '100%' }}>Login</a>
+  <a href="/register" className="btn btn-ghost" style={{ width: '100%' }}>Sign Up</a>
+</motion.div>
       </motion.div>
 
       <div className="scroll-cue" aria-hidden>

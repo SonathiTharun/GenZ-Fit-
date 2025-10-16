@@ -57,7 +57,9 @@ header nav a:hover { color: var(--accent); }
 .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .btn-ghost { background: var(--glass); border-color: var(--glass-border); color: var(--text); }
 .btn-ghost:hover { border-color: #2a2a36; }
-
+.btn-full {
+  width: 100%;
+}
 /* Sections */
 .pad-xl { padding: 60px 0; }
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 20px; }
