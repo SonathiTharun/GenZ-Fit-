@@ -10,6 +10,7 @@ const Classes = lazy(() => import("./pages/Classes"));
 const Gyms = lazy(() => import("./pages/Gyms"));
 const Home = lazy(() => import("./pages/Home"));
 const Mental = lazy(() => import("./pages/MentalFitness"));
+const Diet = lazy(() => import("./pages/DietPlan"));
 
 function PageTransition({ children }) {
   return (
@@ -38,6 +39,14 @@ export default function App() {
                 element={
                   <PageTransition>
                     <Home />
+                  </PageTransition>
+                }
+              />
+              <Route
+                path="/dietplans"
+                element={
+                  <PageTransition>
+                    <Diet />
                   </PageTransition>
                 }
               />

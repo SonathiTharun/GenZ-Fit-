@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const links = [
   { to: '/gyms', label: 'Gyms' },
   { to: '/classes', label: 'Classes' },
-  { to: '#diet', label: 'Diet Plans', external: true },
+  { to: '/dietplans', label: 'Diet Plans', external: true },
   { to: '/mental', label: 'Mental Fitness', external: true },
 ]
 

@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.use('/gyms', gyms)
 router.use('/classes', classes)
-router.use('/diet-plans', dietplans)
+router.use('/dietplans', dietplans)
 router.use('/mental', mental)
 
 module.exports = router

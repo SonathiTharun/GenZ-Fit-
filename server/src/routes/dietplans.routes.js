@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const ctrl = require('../controllers/dietplan.controller')
+const ctrl = require('../controllers/dietplans.controller')
 
 router.get('/', ctrl.list)
 router.post('/', ctrl.create)
