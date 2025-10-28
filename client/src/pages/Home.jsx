@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import FullscreenVideoHero from "../components/FullscreenVideoHero";
+import Hero from "../components/Hero";
 import Carousel from "../components/Carousel";
 import { HOMEPAGE_VIDEO, HOMEPAGE_POSTER } from "../constants";
 
@@ -7,7 +7,7 @@ import { HOMEPAGE_VIDEO, HOMEPAGE_POSTER } from "../constants";
 export default function Home() {
   return (
     <main>
-      <FullscreenVideoHero
+      <Hero
         videoUrl={HOMEPAGE_VIDEO}
         poster={HOMEPAGE_POSTER}
         title="GenZ.Fit"

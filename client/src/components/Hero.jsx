@@ -1,22 +1,27 @@
 import { motion } from 'framer-motion'
 
-export default function FullscreenVideoHero({
+export default function Hero({
   videoUrl,
   poster,
   title = 'Elevate your fitness.',
   subtitle = 'Professional coaching, immersive tech, real results.',
+  children,
 }) {
   return (
     <section className="video-hero" aria-label="Hero">
       <div className="video-bg" aria-hidden>
-        <video
-          src={videoUrl}
-          poster={poster}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+        {videoUrl ? (
+          <video
+            src={videoUrl}
+            poster={poster}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          children
+        )}
         <div className="video-overlay" />
       </div>
 
@@ -52,4 +57,3 @@ export default function FullscreenVideoHero({
     </section>
   )
 }
-

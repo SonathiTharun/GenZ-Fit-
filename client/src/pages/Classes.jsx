@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion'
+import Hero from '../components/Hero'
 import ClassesHero3D from '../components/ClassesHero3D'
 import ClassFilter from '../components/ClassFilter'
 import ClassCard from '../components/ClassCard'
@@ -43,18 +44,16 @@ export default function Classes() {
 
   return (
     <div>
-      <section className="classes-hero">
-        <div className="classes-hero-bg" />
+      <Hero
+        title="Classes"
+        subtitle="Train your way. Yoga, HIIT, strength, cardio — pick your vibe."
+      >
+        <div className="cta-row">
+          <a className="btn btn-primary" href="#list">Browse Classes</a>
+          <a className="btn btn-ghost" href="#schedule">View Schedule</a>
+        </div>
         <ClassesHero3D />
-        <motion.div className="classes-hero-content container" initial={{opacity:0,y:12}} animate={{opacity:1,y:0}}>
-          <h1>Classes</h1>
-          <p className="muted">Train your way. Yoga, HIIT, strength, cardio — pick your vibe.</p>
-          <div className="cta-row">
-            <a className="btn btn-primary" href="#list">Browse Classes</a>
-            <a className="btn btn-ghost" href="#schedule">View Schedule</a>
-          </div>
-        </motion.div>
-      </section>
+      </Hero>
 
       <section className="container pad-xl" id="list">
         <ClassFilter onChange={setFilter} />

@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
+import Hero from '../components/Hero'
 import GymsHero3D from '../components/GymsHero3D'
 import GymFilter from '../components/GymFilter'
 import GymCard from '../components/GymCard'
@@ -33,18 +34,16 @@ export default function Gyms() {
 
   return (
     <div>
-      <section className="gyms-hero">
-        <div className="gyms-hero-bg" />
+      <Hero
+        title="Gyms"
+        subtitle="Find your space. Facilities that match your energy."
+      >
+        <div className="cta-row">
+          <a href="#list" className="btn btn-primary">Explore Gyms</a>
+          <a href="#map" className="btn btn-ghost">View Map</a>
+        </div>
         <GymsHero3D />
-        <motion.div className="gyms-hero-content container" initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{duration:0.7}}>
-          <h1>Gyms</h1>
-          <p className="muted">Find your space. Facilities that match your energy.</p>
-          <div className="cta-row">
-            <a href="#list" className="btn btn-primary">Explore Gyms</a>
-            <a href="#map" className="btn btn-ghost">View Map</a>
-          </div>
-        </motion.div>
-      </section>
+      </Hero>
 
       <section className="container pad-xl" id="list">
         <GymFilter onChange={setFilters} />
